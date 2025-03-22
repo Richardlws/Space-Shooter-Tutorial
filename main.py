@@ -25,10 +25,15 @@ YELLOW_LASER = pygame.image.load(os.path.join("attatch","pixel_laser_yellow.png"
 # Background
 BG = pygame.image.load(os.path.join("attatch","background-black.png"))
 
-#"is_running = True
-#while is_running:
-#    WIN.blit()
-#for event in pygame.event():
-#    if event == pygame.quit()
-#        break
-#pygame.display.update()
+def main():
+    run = True
+    FPS = 60
+    clock = pygame.time.Clock()
+
+    while run:
+        clock.tick(FPS)
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+main()
